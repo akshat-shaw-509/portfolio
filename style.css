@@ -64,25 +64,13 @@ nav {
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: linear-gradient(45deg, #3498db, #2ecc71);
-    transition: width 0.3s ease;
-}
-
 .nav-links a:hover::after {
     width: 80%;
 }
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    height: 130vh;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     display: flex;
     align-items: center;
@@ -93,20 +81,9 @@ nav {
     overflow: hidden;
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-size: cover;
-}
-
 .hero-content {
     max-width: 800px;
     padding: 4rem 2rem 0 2rem;
-    /* Add top padding to prevent nav overlap */
     z-index: 1;
 }
 
@@ -130,19 +107,6 @@ nav {
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
-}
-
-.profile-photo::before {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 4rem;
-    z-index: 1;
-}
-
-.profile-photo img+*::before {
-    display: none;
 }
 
 .hero h1 {
@@ -391,7 +355,6 @@ section {
 .resume {
     text-align: center;
     padding: 0 2rem;
-    /* FIX 4: Add extra bottom margin for spacing */
     margin-bottom: 3rem;
 }
 
@@ -422,7 +385,6 @@ section {
 .contact {
     background: #2c3e50;
     color: white;
-    /* FIX 4: Add top margin to prevent cramping */
     margin-top: 4rem;
 }
 
@@ -502,7 +464,6 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem 0;
-    /* FIX 4: Add top margin for better spacing */
     margin-top: 0;
 }
 
